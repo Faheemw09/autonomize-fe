@@ -39,7 +39,7 @@ const FollowersList = () => {
       </button>
 
       {user ? (
-        <div className="profile-container">
+        <div className="page-content">
           <div className="user-profile">
             <img
               src={user.avatar_url}
@@ -53,9 +53,9 @@ const FollowersList = () => {
             </div>
           </div>
 
-          <div className="followers-list">
+          <div className="followers-container">
             <h3>Followers</h3>
-            <ul>
+            <ul className="followers-list">
               {followers.map((follower) => (
                 <li
                   key={follower.login}

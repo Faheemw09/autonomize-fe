@@ -5,6 +5,7 @@
   padding: 20px;
 }
 
+/* Back Button Styling */
 .back-button {
   padding: 10px 20px;
   background-color: #007bff;
@@ -12,71 +13,120 @@
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  margin-bottom: 20px; /* Add gap between the button and content */
+  margin-bottom: 20px;
 }
 
 .back-button:hover {
   background-color: #0056b3;
 }
 
-.profile-container {
+/* Main Content Container */
+.page-content {
   display: flex;
-  width: 80%;
+  width: 100%;
+  max-width: 1200px;
   justify-content: space-between;
-  gap: 20px; /* Add gap between user profile and followers list */
+  gap: 20px;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
+/* User Profile Section */
 .user-profile {
   flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px; /* Add gap between avatar and user info */
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
 }
 
 .user-avatar {
   width: 150px;
   height: 150px;
   border-radius: 50%;
+  margin-bottom: 15px;
 }
 
 .user-info {
   text-align: center;
 }
 
-.followers-list {
+.user-info h2 {
+  margin: 0;
+  font-size: 1.8em;
+  color: #333;
+}
+
+.user-info p {
+  margin: 5px 0;
+  color: #666;
+}
+
+/* Followers Section */
+.followers-container {
   flex: 2;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
 }
 
-.followers-list ul {
+.followers-container h3 {
+  margin: 0 0 15px 0;
+  color: #333;
+}
+
+.followers-list {
   list-style: none;
   padding: 0;
+  margin: 0;
+  max-height: 400px; /* Optional for scrollable list */
+  overflow-y: auto;
+}
+
+/* Hide Scrollbar */
+.followers-list::-webkit-scrollbar {
+  display: none; /* Hides scrollbar for WebKit browsers */
+}
+
+.followers-list {
+  scrollbar-width: none; /* Hides scrollbar for Firefox */
 }
 
 .follower-item {
   display: flex;
   align-items: center;
-  margin: 10px 0;
-  cursor: pointer;
-  gap: 10px; /* Add gap between follower avatar and name */
+  gap: 15px; /* Space between avatar and name */
   padding: 10px;
+  border-bottom: 1px solid #f0f0f0;
+  cursor: pointer;
   border-radius: 8px;
   transition: background-color 0.2s ease;
 }
 
 .follower-item:hover {
-  background-color: #f0f0f0; /* Light hover effect */
+  background-color: #f0f0f0; /* Hover effect */
 }
 
 .follower-avatar {
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
 }
 
+.follower-item p {
+  margin: 0;
+  font-size: 1em;
+  color: #333;
+  font-weight: bold;
+}
+
+/* Buttons */
 button {
   margin-top: 20px;
   padding: 10px 20px;
