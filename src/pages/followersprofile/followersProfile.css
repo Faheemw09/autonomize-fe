@@ -1,0 +1,85 @@
+.followers-profile {
+  padding: 20px;
+  text-align: center;
+}
+
+.back-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.back-button:hover {
+  background-color: #0056b3;
+}
+
+.profile-header {
+  margin-bottom: 20px;
+}
+
+.profile-header img {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  margin-bottom: 10px;
+}
+
+.profile-header h2 {
+  font-size: 24px;
+  margin: 5px 0;
+  color: #333;
+}
+
+.profile-header p {
+  color: #666;
+}
+
+.profile-stats {
+  margin: 20px 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+.profile-stats p {
+  font-size: 16px;
+  color: #333;
+}
+
+.repos-list {
+  text-align: left;
+}
+
+.repos-list h3 {
+  color: #333;
+}
+
+.repos-list ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.repos-list li {
+  margin-bottom: 10px;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.repos-list li a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.repos-list li a:hover {
+  text-decoration: underline;
+}
+
+.repos-list li p {
+  margin: 5px 0;
+  color: #666;
+}
