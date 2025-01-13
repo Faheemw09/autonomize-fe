@@ -1,70 +1,84 @@
-# Getting Started with Create React App
+# GitHub User Data API Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is the frontend for the **GitHub User Data API**. It allows users to search for GitHub usernames, view repositories, see user details, and navigate through repository details and followers, all using React hooks. The app fetches and displays data from the **GitHub API** and allows seamless navigation between different pages without redundant API calls.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+1. **Search for GitHub Username**: 
+   - An initial page with an input box where you can enter a GitHub username and click on a submit/search button.
+   
+2. **Display Repositories**: 
+   - On submitting the username, it shows the list of repositories fetched from the backend API for the entered GitHub username, along with some useful user information above the repository list.
+   
+3. **Repository Details**: 
+   - Clicking on any repository name in the list takes you to a page that shows detailed information about that repository (description, etc.).
+   
+4. **Followers Navigation**: 
+   - On the repository list page, there is a link/button to navigate to a page showing the followers of the current GitHub user.
+   
+5. **Follower Repository Navigation**: 
+   - Clicking on any follower in the follower list will take you to the repository list page of that follower.
+   
+6. **Return to Repository List**: 
+   - There's an option to navigate back to the repository list page with the input box to search for another user.
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Technologies Used
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- React.js
+- React Hooks (for state management)
+- React Router (for page navigation)
+- Axios (for API requests)
+- GitHub API
+- CSS (for styling)
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Deployed Link
 
-### `npm run build`
+You can access the deployed frontend at:  
+[https://autonomize-fe.vercel.app](https://autonomize-fe.vercel.app)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## How It Works
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 1. **Search Page**  
+   - The app starts with an input box where users can enter a GitHub username and click on the submit/search button.
+   - After the submission, it makes an API call to fetch the repositories for that username and displays them along with some user information (name, avatar, etc.).
 
-### `npm run eject`
+### 2. **Repository List Page**  
+   - The repository list is displayed with the repository names and some details like the number of stars, forks, and the repository language.
+   - There is a button to navigate to the followers page for the current user.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### 3. **Repository Details Page**  
+   - Clicking on a repository name leads to a details page that shows the repository's description and other relevant details.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 4. **Followers Page**  
+   - The followers of the current user are displayed with their usernames and avatars. Clicking on a follower’s name will show their repository list page.
+   
+### 5. **Return to Repository List**  
+   - There is a way to navigate back to the repository list page with the input box to search for another GitHub username.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Important Notes
 
-## Learn More
+- **React Hooks**: The app uses only React hooks for managing the component state and API requests.
+- **State Management**: The app does not call the GitHub API repeatedly for information already fetched (like repositories, followers, etc.). It stores this data in React state to ensure no redundant API calls.
+- **User Data**: Information like the avatar of the user is fetched using `avatar_url` from the GitHub API.
+- **Routing**: React Router is used to navigate between the different pages (repository list, repository details, followers page).
+  
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Key Features Included in the README:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+1. **Search for GitHub Username**: Input box for GitHub username and submit button functionality.
+2. **Repository List**: Display repositories for the given GitHub username.
+3. **Repository Details**: Navigate to a page showing the repository's description.
+4. **Followers**: Option to view the followers of the current GitHub user and navigate to their repository list.
+5. **Navigation**: Seamless navigation between pages without re-fetching the same data.
+6. **React Hooks & State Management**: Describes the use of React hooks for managing state and API requests.
+!
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
