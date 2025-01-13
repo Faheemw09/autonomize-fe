@@ -30,7 +30,7 @@ const InputForm = ({ setUserData, setRepos }) => {
       setRepos(reposResponse.data);
 
       setUsername("");
-      navigate("/repo"); // Navigate to the repo list after fetching data
+      navigate("/repo");
     } catch (error) {
       toast.error(
         error.response?.data?.message || "User not found or an error occurred."
@@ -52,6 +52,13 @@ const InputForm = ({ setUserData, setRepos }) => {
         />
         <button type="submit" disabled={loading}>
           {loading ? "Loading..." : "Search"}
+        </button>
+        <button
+          type="button"
+          style={{ marginLeft: "5px" }}
+          onClick={() => navigate("/user-list")}
+        >
+          Users
         </button>
       </form>
     </div>
